@@ -2,6 +2,8 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: orders
+annotations:
+    argocd.argoproj.io/sync-wave: "0"
 data:
   SPRING_PROFILES_ACTIVE: mysql,rabbitmq
   SPRING_RABBITMQ_HOST: rabbitmq.rabbitmq.svc

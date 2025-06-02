@@ -4,6 +4,8 @@ metadata:
   name: checkout-redis
   labels:
     app.kubernetes.io/created-by: eks-workshop
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   type: ClusterIP
   ports:
